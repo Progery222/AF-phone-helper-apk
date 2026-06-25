@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:allowBackup="false"
+        android:label="AF Helper"
+        android:supportsRtl="true">
+
+        <receiver
+            android:name=".LocaleReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.af.helper.SET_LOCALE" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>
